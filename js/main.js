@@ -8,6 +8,16 @@ document.querySelectorAll('.sidebar a').forEach(anchor => {
     });
 });
 
+//Descargar archivo
+function descargarArchivo(url) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', '');
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 //Script de cambio de idioma
   document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggle-language");
