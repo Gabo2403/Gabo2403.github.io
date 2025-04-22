@@ -555,74 +555,24 @@ section {
   
   @media (max-width: 768px) {
     .sidebar {
-      width: 100%;
-      height: auto;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      position: relative;
-    }
-    .sidebar h1,
-    .sidebar img,
-    .sidebar ul,
-    .sidebar-bottom {
-      width: 100%;
-      text-align: center;
-    }
-    main {
-      margin-left: 0;
-      width: 100%;
-      padding: 20px;
-    }
-    .skills-grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    .proyectos-column,
-    .galeria-certificados,
-    .contenedor-intereses,
-    .contacto-flex {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #1c1c1c;
+      display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .proyecto-detallado {
-      flex-direction: column;
-      text-align: center;
-    }
-    .proyecto-detallado img {
-      width: 100%;
-      max-width: 320px;
-    }
-    dotlottie-player {
-      width: 100%;
-      max-width: 280px;
-    }
-    .footer-content {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-    .contact-icons-row {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .btn-cv,
-    #form #button,
-    .language-toggle button {
-      width: 100%;
-      max-width: 240px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .sidebar {
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
       padding: 20px 10px;
-      width: 100%;
-      height: auto;
-      background-color: #1c1c1c; /* o el color que uses de fondo */
+      z-index: 1000;
+    }
+  
+    main {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+      padding: 20px;
     }
   
     .sidebar h1,
@@ -634,75 +584,87 @@ section {
       margin-bottom: 15px;
     }
   
-    .sidebar ul {
-      padding: 0;
-      margin: 10px 0;
-      list-style: none;
-    }
-  
     .sidebar ul li {
-      margin: 8px 0;
+      margin: 10px 0;
     }
   
-    .sidebar-bottom {
-      display: flex;
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  
+    .proyectos-column,
+    .galeria-certificados,
+    .contenedor-intereses,
+    .contacto-flex {
       flex-direction: column;
       align-items: center;
-      gap: 10px;
     }
   
-    .cv-buttons {
-      display: flex;
+    .proyecto-detallado {
       flex-direction: column;
-      gap: 8px;
-      width: 100%;
+      text-align: center;
     }
   
-    .btn-cv {
+    .proyecto-detallado img {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    dotlottie-player {
+      width: 100%;
+      max-width: 280px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .contact-icons-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .btn-cv,
+    #form #button,
+    .language-toggle button {
       width: 100%;
       max-width: 240px;
       margin: 0 auto;
     }
   
-    .contact-icons-row {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-  
-    .contact-icons-row img {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .language-toggle {
-      margin-top: 10px;
-    }
-    
     .skill-circle.filled {
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
     }
+  
     .skill-circle.filled img {
       width: 28px;
       height: 28px;
     }
+  
     .skill-circle.filled span {
       font-size: 11px;
     }
+  
     .interes {
       width: 100px;
       height: 100px;
       padding: 10px;
     }
+  
     .interes img {
       width: 28px;
       height: 28px;
     }
+  
     .interes span {
       font-size: 12px;
     }
-    .btn-cv {
-      font-size: 14px;
+  
+    .language-toggle {
+      margin-top: 10px;
     }
   }
