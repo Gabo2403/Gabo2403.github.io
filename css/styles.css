@@ -555,24 +555,18 @@ section {
   
   @media (max-width: 768px) {
     .sidebar {
-      width: 220px;
+      width: 130px;
       height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #1c1c1c;
+      background-color: #b5b0b0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 10px;
+      padding: 10px 5px;
       z-index: 1000;
-    }
-  
-    main {
-      margin-left: 220px;
-      width: calc(100% - 220px);
-      padding: 20px;
     }
   
     .sidebar h1,
@@ -581,90 +575,52 @@ section {
     .sidebar-bottom {
       width: 100%;
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   
-    .sidebar ul li {
-      margin: 10px 0;
-    }
-  
-    .skills-grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-  
-    .proyectos-column,
-    .galeria-certificados,
-    .contenedor-intereses,
-    .contacto-flex {
+    .cv-buttons {
+      display: flex;
       flex-direction: column;
       align-items: center;
-    }
-  
-    .proyecto-detallado {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .proyecto-detallado img {
-      width: 100%;
-      max-width: 320px;
-    }
-  
-    dotlottie-player {
-      width: 100%;
-      max-width: 280px;
-    }
-  
-    .footer-content {
-      flex-direction: column;
       gap: 10px;
-      text-align: center;
+      width: 100%;
+    }
+  
+    .btn-cv {
+      width: 70px;
+      font-size: 12px;
+      padding: 6px;
     }
   
     .contact-icons-row {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-  
-    .btn-cv,
-    #form #button,
-    .language-toggle button {
-      width: 100%;
-      max-width: 240px;
-      margin: 0 auto;
-    }
-  
-    .skill-circle.filled {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .skill-circle.filled img {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .skill-circle.filled span {
-      font-size: 11px;
-    }
-  
-    .interes {
-      width: 100px;
-      height: 100px;
-      padding: 10px;
-    }
-  
-    .interes img {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .interes span {
-      font-size: 12px;
-    }
-  
-    .language-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       margin-top: 10px;
+    }
+  
+    .contact-icons-row img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    main {
+      margin-left: 80px;
+      width: calc(100% - 60px);
+      padding: 20px;
+    }
+  
+    section#sobreMi,
+    section#experiencia,
+    section#certificaciones,
+    section#contacto {
+      width: 100%;
+    }
+  
+    .proyectos-column {
+      align-items: baseline;
+      justify-content: right;
+      text-align: right;
     }
   }
